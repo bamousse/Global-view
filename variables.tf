@@ -1,3 +1,7 @@
+variable "region" {
+  type = string
+}
+
 variable "function_name" {
   type = string
 }
@@ -15,15 +19,18 @@ variable "description" {
 }
 
 variable "handler" {
+  type        = string
   description = "format should be of : filename.lambda_handler (filename without .zip extension) "
 }
 
  variable "memory_size" {
-  type = number
+  type    = number
+  default = "128"
 }
 
  variable "concurrency" {
-  type = number
+  type    = number
+  default = "5"
 }
 
 variable "role_arn " {}
