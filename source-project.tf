@@ -1,5 +1,5 @@
 module "lambda-Call" {
-  source = "../Modules"
+  source = "Modules"
 
   function_name      = "lambda-instance-state"
   filename           = "../start_instance.zip"
